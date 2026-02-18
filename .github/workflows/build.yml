@@ -3,45 +3,10 @@ name: Build Screensaver
 on:
   push:
     tags:
-      - 'v*'         # trigger on version tags like v1.0.0
-  workflow_dispatch: # also allow manual trigger from GitHub UI
+      - 'v*'
+  workflow_dispatch:
 
 jobs:
-  # ── macOS DMG ────────────────────────────────────────────────
-  build-mac:
-    name: Build macOS DMG
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Set up Python + Pillow
-        run: |
-          pip3 install Pillow --break-system-packages || pip3 install Pillow
-
-      - name: Generate icons
-        run: python3 scripts/generate_icons.py
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build macOS DMG
-        run: npm run build:mac
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload macOS artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: mac-dmg
-          path: dist/*.dmg
-
-  # ── Windows NSIS Installer ───────────────────────────────────
   build-windows:
     name: Build Windows Installer
     runs-on: windows-latest
@@ -73,30 +38,3 @@ jobs:
         with:
           name: windows-installer
           path: dist/*.exe
-
-  # ── Bundle both for release ───────────────────────────────────
-  release:
-    name: Create GitHub Release
-    needs: [build-mac, build-windows]
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/')
-    steps:
-      - name: Download Mac artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: mac-dmg
-          path: ./artifacts
-
-      - name: Download Windows artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: windows-installer
-          path: ./artifacts
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: ./artifacts/*
-          generate_release_notes: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
