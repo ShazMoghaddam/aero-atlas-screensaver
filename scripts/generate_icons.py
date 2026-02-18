@@ -95,7 +95,7 @@ def make_icns():
     path = os.path.join(BUILD_DIR, 'icon.icns')
     with open(path, 'wb') as f:
         f.write(out.getvalue())
-    print(f'✓ Written {path}')
+    print('OK: Written ' + path)
 
 
 # ── ICO (Windows) ─────────────────────────────────────────────────────────────
@@ -111,7 +111,7 @@ def make_ico():
         sizes=[(s, s) for s in ICO_SIZES],
         append_images=[img for _, img in images[1:]]
     )
-    print(f'✓ Written {path}')
+    print('OK: Written ' + path)
 
 
 if __name__ == '__main__':
