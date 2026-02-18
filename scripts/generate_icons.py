@@ -99,7 +99,7 @@ def make_icns():
 
 
 # ── ICO (Windows) ─────────────────────────────────────────────────────────────
-ICO_SIZES = [16, 32, 48, 64, 128, 256]
+ICO_SIZES = [256, 512]
 
 def make_ico():
     images = [(s, make_icon_image(s)) for s in ICO_SIZES]
