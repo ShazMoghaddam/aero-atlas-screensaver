@@ -1,0 +1,129 @@
+────────────────────────────────────────────────
+ AERO ATLAS — TERMINAL TIME SCREENSAVER
+ Installation Guide
+ Version 1.0
+────────────────────────────────────────────────
+
+
+WHAT'S IN THIS DOWNLOAD
+────────────────────────
+
+  • Aero Atlas — Terminal Time-1.0.0.dmg   ← macOS installer
+  • Aero Atlas — Terminal Time Setup.exe   ← Windows installer  
+  • INSTALL.txt                             ← this file
+  • LICENSE.txt                             ← your license
+  • README.txt                              ← features overview
+
+
+═══════════════════════════════════════════════
+ macOS INSTALLATION
+═══════════════════════════════════════════════
+
+1. Double-click "Aero Atlas — Terminal Time-1.0.0.dmg"
+
+2. Drag the "Aero Atlas — Terminal Time" app into your
+   Applications folder when the installer window appears.
+
+3. IMPORTANT — First Launch (Gatekeeper):
+   macOS may say the app "cannot be opened because it is from
+   an unidentified developer." This is normal for indie apps.
+
+   To open it anyway:
+   a) Right-click (or Control-click) the app icon
+   b) Choose "Open" from the menu
+   c) Click "Open" in the dialog that appears
+   You only need to do this once.
+
+4. The screensaver launches fullscreen immediately.
+   Press Esc or move your mouse to close it.
+
+5. To set it as your system screensaver:
+   • This app runs as a standalone fullscreen screensaver app.
+   • To auto-launch it after idle time, use a free tool like:
+       – Lungo (Mac App Store, free)
+       – Alfred workflow
+       – Or simply add it to your Login Items and use
+         System Settings → Lock Screen → "Start Screen Saver after"
+         (set to your preferred idle time, then set the screensaver
+          to a system one — Terminal Time will overlay on demand)
+   • The simplest approach: press the app's icon in your Dock
+     whenever you want the clock display.
+
+
+═══════════════════════════════════════════════
+ WINDOWS INSTALLATION
+═══════════════════════════════════════════════
+
+1. Double-click "Aero Atlas — Terminal Time Setup.exe"
+
+2. Follow the installer steps. You can choose your install folder.
+
+3. Once installed, find "Aero Atlas — Terminal Time" in your
+   Start Menu or Desktop shortcut.
+
+4. The screensaver launches fullscreen. Press Esc or move your
+   mouse to close it.
+
+5. To set as Windows screensaver:
+   a) Right-click the Desktop → Personalize
+   b) Click "Lock screen" → "Screen saver settings"
+   c) Click Browse and navigate to:
+        C:\Program Files\Aero Atlas — Terminal Time\
+      Select "Aero Atlas - Terminal Time.exe"
+   d) Set your idle timeout and click OK.
+
+
+═══════════════════════════════════════════════
+ USING THE SCREENSAVER
+═══════════════════════════════════════════════
+
+CONTROLS (move mouse first to show the toolbar):
+
+  • Click the settings icon to:
+      – Add or remove cities (up to 10)
+      – Change the accent colour theme
+      – Toggle click sounds on/off
+
+  • Drag city rows to reorder them
+
+  • Your city (detected automatically) always appears first
+
+  • Press Esc or move mouse to exit screensaver mode
+
+
+KEYBOARD SHORTCUTS:
+  Esc         — Exit screensaver
+
+
+═══════════════════════════════════════════════
+ TROUBLESHOOTING
+═══════════════════════════════════════════════
+
+"App is damaged and can't be opened" (macOS):
+  Open Terminal and run:
+    xattr -cr "/Applications/Aero Atlas — Terminal Time.app"
+  Then try launching again.
+
+Fonts look wrong / missing:
+  The app bundles all fonts — no internet connection needed.
+  If fonts appear missing, try quitting and relaunching.
+
+Clock shows wrong timezone:
+  The home city is auto-detected from your system timezone.
+  If incorrect, open settings and adjust your city list.
+
+Performance / stuttering:
+  The split-flap animation is GPU-accelerated. On older machines,
+  try closing other apps. The screensaver uses minimal CPU at rest.
+
+
+═══════════════════════════════════════════════
+ SUPPORT & CONTACT
+═══════════════════════════════════════════════
+
+  Purchased on Gumroad? Reply to your purchase receipt
+  and we'll help you out.
+
+  Thank you for supporting independent design work. ♥
+
+────────────────────────────────────────────────

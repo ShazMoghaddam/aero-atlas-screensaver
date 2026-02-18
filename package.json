@@ -1,0 +1,90 @@
+{
+  "name": "aero-atlas-terminal-time",
+  "productName": "Aero Atlas — Terminal Time",
+  "version": "1.0.0",
+  "description": "Atmospheric split-flap world clock screensaver for macOS and Windows",
+  "author": {
+    "name": "Aero Atlas",
+    "email": "hello@aeroatlas.co"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "start:screensaver": "electron . --screensaver",
+    "build:mac": "electron-builder --mac --x64 --arm64",
+    "build:win": "electron-builder --win --x64",
+    "build:all": "electron-builder --mac --win",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "co.aeroatlas.terminaltime",
+    "productName": "Aero Atlas — Terminal Time",
+    "copyright": "Copyright © 2025 Aero Atlas",
+    "directories": {
+      "buildResources": "build-resources",
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.entertainment",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "icon": "build-resources/icon.icns",
+      "darkModeSupport": true,
+      "minimumSystemVersion": "10.15",
+      "extendInfo": {
+        "NSScreenSaverWindowLevel": true,
+        "LSUIElement": false
+      }
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build-resources/icon.ico",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "allowElevation": true,
+      "installerIcon": "build-resources/icon.ico",
+      "installerHeaderIcon": "build-resources/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Aero Atlas — Terminal Time",
+      "license": "LICENSE.txt",
+      "runAfterFinish": false
+    },
+    "dmg": {
+      "title": "Aero Atlas — Terminal Time",
+      "backgroundColor": "#080808",
+      "window": {
+        "width": 540,
+        "height": 380
+      },
+      "contents": [
+        { "x": 140, "y": 190, "type": "file" },
+        { "x": 400, "y": 190, "type": "link", "path": "/Applications" }
+      ]
+    }
+  }
+}
