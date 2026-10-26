@@ -7,7 +7,7 @@
     "name": "Aero Atlas",
     "email": "hello@aeroatlas.co"
   },
-  "license": "SEE LICENSE IN LICENSE.txt",
+  "license": "MIT",
   "main": "main.js",
   "private": true,
   "scripts": {
@@ -71,7 +71,7 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "Aero Atlas — Terminal Time",
-      "license": "LICENSE.txt",
+      "license": "LICENSE",
       "runAfterFinish": false
     },
     "dmg": {
