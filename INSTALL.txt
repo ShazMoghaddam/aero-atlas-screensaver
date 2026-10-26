@@ -11,7 +11,7 @@ WHAT'S IN THIS DOWNLOAD
   • Aero Atlas — Terminal Time-1.0.0.dmg   ← macOS installer
   • Aero Atlas — Terminal Time Setup.exe   ← Windows installer  
   • INSTALL.txt                             ← this file
-  • LICENSE.txt                             ← your license
+  • LICENSE                                 ← MIT licence
   • README.txt                              ← features overview
 
 

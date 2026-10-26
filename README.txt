@@ -33,9 +33,7 @@ SYSTEM REQUIREMENTS
 
 LICENSE
 ───────
-  Personal use license. See LICENSE.txt for full terms.
-  One purchase = use on all your own computers.
-  Not for redistribution or resale.
+  MIT licence. See LICENSE for full terms.
 
 VERSION HISTORY
 ───────────────
